@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "PIP mode for GO questions",
+    "version": "2.0",
+    "author": "Shaik Masthan",
+    "description": "Stick question content to a corner, handy in case of long threads",
+    "icons": {
+        "128": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "css": [
+                "styles.css"
+            ],
+            "js": [
+                "script.js"
+            ],
+            "matches": [
+                "https://*.gateoverflow.in/*"
+            ],
+            "exclude_matches": [
+                "https://gateoverflow.in/blog/*",
+                "https://gateoverflow.in/exam/*"
+            ]
+        }
+    ]
+}
