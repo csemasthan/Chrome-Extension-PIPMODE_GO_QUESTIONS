@@ -1,2 +1,5 @@
 # PIPMODE_GO_QUESTIONS
-Picture in Picture mode for question contents of gateoverflow.in
+An extension for creating Picture in Picture mode for question contents of gateoverflow.in
+
+
+original credits : https://gateoverflow.in/blog/6202/
