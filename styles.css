@@ -1,29 +1,46 @@
+:root {
+    --box-background: LightGray;
+    --header-background: LightGray;
+    --content-background: LightGray;
+    --box-border-background: rgb(208, 206, 206);
+    --text-color: black;
+  }
+  [data-theme="dark"]{ 
+    --box-background: LightGray !important; 
+    --header-background: LightGray!important; 
+    --content-background: LightGray !important;
+    --box-border-background: white !important;
+    --text-color: black !important; 
+  }
 #PIPBOX{
 top:2px;
 right:2px;
 z-index:9999;
-border:1px solid LightGray;
-width:30%;
-height:auto;
+border:1px solid var(--box-border-background);
+width:28%;
+max-height: 450px;
 border-radius:5px;
 overflow:auto;
 resize:both;
 position:fixed;
 visibility:hidden;	/* initially making hidden, after that it will be Visible depends upon question visibility */
+background-color: var(--box-background);
 }
 
 #PIPBOX_Header{
-background-color: LightGray;
+background-color: var(--header-background);
 border-bottom: 1px solid white;
 text-align: center;
 cursor: move;
 line-height:3;
+color: var(--text-color);
 }
 
 #PIPBOX_Content{
-background-color: LightGray;
+background-color:  var(--content-background);
 text-indent: 10px;
 padding:5px;
+color: var(--text-color);
 }
 
 #close{
@@ -32,4 +49,6 @@ text-align: right;
 right:25px;
 position:relative;
 cursor:pointer;
+color: var(--text-color);
 }
+

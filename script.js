@@ -91,3 +91,20 @@ document.addEventListener('scroll', function () {
 }, {
     passive: true
 });
+
+//Dark Mode for pip box
+document.addEventListener("DOMContentLoaded", function() {
+	function applyPIPBoxTheme() {
+	  const pipBox = document.getElementById("PIPBOX");
+	  const theme = document.documentElement.getAttribute('data-theme');
+  
+	  if (theme === 'dark') {
+		pipBox.classList.add("dark-mode");
+	  } else {
+		pipBox.classList.remove("dark-mode");
+	  }
+	}
+	const observer = new MutationObserver(applyPIPBoxTheme);
+	observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+});
+  
